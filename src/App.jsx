@@ -42,8 +42,8 @@ export default function LoginForm() {
       .catch(({message}) => setMessage(message))
       .finally(() => setTimeout(() => setMessage(''), 5000))
 
-    setDisableButton(false)
     limparCampos()
+    setDisableButton(false)
   }
 
   return (
@@ -58,7 +58,7 @@ export default function LoginForm() {
         </div>
         <div className='row'>
           <label htmlFor={'password'}>Password</label>
-          <input id={'password'} type={'password'}  value={password} onChange={(e) => setPassword(e.target.value)}/>
+          <input id={'password'} type={'password'} value={password} onChange={(e) => setPassword(e.target.value)}/>
         </div>
 
         <div className='button'>
